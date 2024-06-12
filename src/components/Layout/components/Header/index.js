@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCircleXmark, faMagnifyingGlass, } from "@fortawesome/free-solid-svg-icons"
 import { faSpinner } from "@fortawesome/free-solid-svg-icons"
 
+import Button from '~/components/Button';
 import styles from './Header.module.scss'
 import images from "~/assets/images"
 import { Wrapper as PopperWrapper } from '~/components/Popper';
@@ -18,7 +19,7 @@ function Header(){
 
     useEffect(()=>{
         setTimeout(()=>{
-           setSearchResult([])
+           setSearchResult([1,2,3])
         },0)
     },[])
     return(
@@ -60,6 +61,10 @@ function Header(){
                     </div>
                 </Tippy>
                     <div className={cx('actions')}>
+                          <Button text >Upload</Button>
+                          <Button primary >Log in</Button>
+                          {/* tao class de custom rieng (css trong file header.modul.scss*/}
+                          {/* <Button  className={cx('ten class')}>Log in</Button> */}
 
                     </div>
             </div>
